@@ -1,0 +1,228 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>E06 - Fridge App</title>
+
+    <style>
+        div {
+            padding:3px 0px 3px 0px;
+            margin: 5px;
+        }
+
+        #screenBorder {
+            border: solid;
+            float: left;
+            background-color: lightgray;
+        }
+
+        #fridgeInterior {
+            float:left;
+        }
+
+        #footer {
+            clear:both;
+        }
+
+        .imgbox {
+            display: grid;
+            height: 100%;
+            padding: 20px;
+        }
+
+        .centerFit {
+            max-width: 85%;
+            max-height: 85vh;
+            margin: auto;
+        }
+
+    </style>
+
+    <script>
+        function powerButton() {
+            var powB = document.getElementById("powerButton");
+            if (powB.value == "On") {
+                if (document.getElementById("doorButton").value == "Opened") {
+                    alert("You should close your fridge before turning it off.");
+                }
+                else {
+                    powB.value = "Off";
+                    powB.style.backgroundColor = "red";
+                    powB.textContent = "Off";
+                    document.getElementById("hideableContent").style = "visibility:hidden";
+                    document.getElementById("screenBorder").style = "background-color:black";
+                    tvOff();
+                }
+            }
+            else {
+                powB.value = "On";
+                powB.style.backgroundColor = "green";
+                powB.textContent = "On";
+                document.getElementById("hideableContent").style = "visibility:visible";
+                document.getElementById("screenBorder").style = "background-color:lightgray";
+            }
+        }
+
+        function tvOff() {
+            var tvB = document.getElementById("tvButton");
+            tvB.value = "Off";
+            tvB.style.backgroundColor = "red";
+            tvB.textContent = "TV Off";
+            document.getElementById("tvScreen").style = "visibility:hidden";
+        }
+
+        function tvButton() {
+            var tvB = document.getElementById("tvButton");
+            if (tvB.value == "On") {
+                tvOff()
+            }
+            else {
+                tvB.value = "On";
+                tvB.style.backgroundColor = "green";
+                tvB.textContent = "TV On";
+                document.getElementById("tvScreen").style = "visibility:visible";
+            }
+        }
+
+        function doorButton() {
+            var doorB = document.getElementById("doorButton");
+            if (doorB.value == "Closed") {
+                doorB.value = "Opened";
+                doorB.textContent = "Opened";
+                document.getElementById("fridgeInterior").style = "display:block";
+            }
+            else {
+                doorB.value = "Closed";
+                doorB.textContent = "Closed";
+                document.getElementById("fridgeInterior").style = "display:none";
+            }
+        }
+
+        function changeTimeDisplay() {
+            var timeD = document.getElementById("timeButton");
+            if (timeD.value == "std") {
+                timeD.value = "mil";
+                timeD.textContent = "Military Time Display";
+                doClockTick();
+            }
+            else {
+                timeD.value = "std";
+                timeD.textContent = "Standard Time Display";
+                doClockTick();
+            }
+        }
+
+        function changeTempDisplay() {
+            var tempD = document.getElementById("tempButton");
+            var temp = document.getElementById("temp");
+            if (tempD.value == "F") {
+                tempD.value = "C";
+                tempD.textContent = "C";
+                temp.textContent = Math.ceil((parseInt(temp.textContent) - 32) * (5 / 9.0));
+                temp.value = temp.textContent;
+            }
+            else {
+                tempD.value = "F";
+                tempD.textContent = "F";
+                temp.textContent = Math.ceil((parseInt(temp.textContent) * (9 / 5.0)) + 32);
+                temp.value = temp.textContent;
+            }
+        }
+
+        function decreaseTemp() {
+            var temp = document.getElementById("temp");
+            temp.textContent = parseInt(temp.textContent) - 1;
+            temp.value = temp.textContent;
+        }
+
+        function increaseTemp() {
+            var temp = document.getElementById("temp");
+            temp.textContent = parseInt(temp.textContent) + 1;
+            temp.value = temp.textContent;
+        }
+
+        function resetTemp() {
+            var tempD = document.getElementById("tempButton");
+            var temp = document.getElementById("temp");
+            if (tempD.value == "F") {
+                temp.textContent = 41;
+            }
+            else {
+                temp.textContent = 5;
+            }
+            temp.value = temp.textContent;
+        }
+
+        function doStartClock() {
+            doClockTick();
+            setInterval(doClockTick, 1000);
+        }
+
+        function doClockTick() {
+            var currentDate = new Date();
+            var timeD = document.getElementById("timeButton");
+            var hours = currentDate.getHours();
+            if (timeD.value == "std" && hours > 12) {
+                hours = hours - 12;
+            }
+            var mins = currentDate.getMinutes();
+            if (mins < 10) {
+                mins = "0" + mins;
+            }
+            var secs = currentDate.getSeconds();
+            if (secs < 10) {
+                secs = "0" + secs;
+            }
+            var timeString = hours + ":" + mins + ":" + secs;
+
+            document.getElementById("clock").textContent = timeString;
+        }
+
+    </script>
+</head>
+
+<body onload="doStartClock()" id="body">
+    <div>
+        <button onclick="powerButton()" style="background-color:green;" id="powerButton" value="On">On</button>
+        <button onclick="doorButton()" id="doorButton" value="Closed">Closed</button>
+    </div>
+
+    <div id="screenBorder">
+        <div id="hideableContent">
+            <div>
+                <p style="display: inline;" id="clock">00:00:00</p>
+                <button onclick="changeTimeDisplay()" id="timeButton" value="std">Standard Time Display</button>
+            </div>
+
+            <div>
+                <p style="display: inline;" id="temp" value="41">41</p>
+                &deg;
+                <button onclick="changeTempDisplay()" id="tempButton" value="F">F</button>
+                <button onclick="decreaseTemp()" id="decreaseTempButton">-</button>
+                <button onclick="increaseTemp()" id="increaseTempButton">+</button>
+                <button onclick="resetTemp()" style="background-color:yellow;">Reset</button>
+            </div>
+
+            <div>
+                <button onclick="tvButton()" id="tvButton" value="Off" style="background-color:red;">TV Off</button>
+                <br />
+                <div id="screenBorder" style="background-color:black;">
+                    <div id="tvScreen" class="imgbox" style="visibility:hidden">
+                        <img src="https://media.tenor.com/s21lfIJ2AZsAAAAC/dancing-spongebob.gif">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="fridgeInterior" class="imgbox" style="display:none">
+        <img class="centerFit" src="https://cdn.apartmenttherapy.info/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_730,h_913/k%2Farchive%2F6c0acf743d4d7b4d7dd8dc3b10b837ce88785201">
+    </div>
+
+    <footer id="footer">
+        <hr />
+        <small>&copy; Justin Peeney 10/16/23</small>
+    </footer>
+</body>
+</html>
