@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<!--Use action verbs for these principles-->
+<head>
+    <meta charset="utf-8" />
+
+    <title>
+        Justin's Design Principles
+    </title>
+
+    <style>
+        footer {
+            clear: left;
+        }
+        body {
+            background-color:tan;
+            font-family:'Century Gothic';
+        }
+    </style>
+
+    <script>
+        function changeFormat() {
+            var format = document.getElementById("formatButton");
+            if (format.value == "2") {
+                format.value = "1";
+                format.textContent = "One Column";
+                document.getElementById("col1").style = "clear:left;";
+                document.getElementById("col2").style = "clear:left;";
+            }
+            else {
+                format.value = "2";
+                format.textContent = "Two Columns";
+                document.getElementById("col1").style = "float:left; width: 50%;";
+                document.getElementById("col2").style = "float:left; width: 50%;";
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>
+        <u>Justin's Design Principles</u>
+    </h1>
+
+    <div>
+        <button onclick="changeFormat()" id="formatButton" value="2" style="font-family:'Century Gothic';">Two Columns</button>
+    </div>
+    <div id="col1" style="float: left; width: 50%;">
+        <h2>
+            Key Principles
+        </h2>
+        <ul>
+            <li>Visibility</li>
+            <li>Consistency</li>
+            <li>Feedback</li>
+            <li>Constraints</li>
+            <li>Affordances</li>
+            <li>Accessibility</li>
+        </ul>
+
+        <h2>
+            Complexity Considerations
+        </h2>
+        <ul>
+            <li>Be as easy as email</li>
+            <li>Allow users to learn by doing</li>
+            <li>Provide fluid pathways</li>
+            <li>Reduce clutter</li>
+        </ul>
+
+        <h2>
+            Cultural/Gender Considerations
+        </h2>
+        <ul>
+            <li>Consider differences in reading habits - left to right or right to left</li>
+            <li>Consider differences in offensive language or gestures</li>
+            <li>Don't assume cultural similarity just because of geographical location</li>
+            <li>Consider if gendered language is helpful or harmful</li>
+        </ul>
+
+        <h2>
+            Conceptual Considerations
+        </h2>
+        <ul>
+            <li>Use mind maps to visually structure ideas</li>
+            <li>Use prototypes to get a feel for your system</li>
+            <li>Use personas to build scenarios, scenarios to build stories, and stories to build features</li>
+            <li>Create use case diagrams to define your system's requirements and goals</li>
+            <li>Explain your system using effective metaphors</li>
+        </ul>
+    </div>
+
+    <div id="col1" style="float: left; width: 50%;">
+        <h2>
+            Human-Centered and Cognitive Considerations
+        </h2>
+        <ul>
+            <li>Adapt your tools to users - don't expect vice versa</li>
+            <li>Present your information to be processed in bite-size chunks (progressive disclosure)</li>
+            <li>
+                Take advantage of progressive disclosure
+                <ul>
+                    <li>Use links, dropdown menus, sliders, and categorization</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>
+            Emotional Considerations
+        </h2>
+        <ul>
+            <li>Be empathetic</li>
+            <li>Design for security</li>
+            <li>Surprise your users</li>
+            <li>Don't underestimate the power of persuasion</li>
+        </ul>
+
+        <h2>
+            Accessibility
+        </h2>
+        <ul>
+            <li>Perceivable, operable, understandable, robust</li>
+            <li>"Humans might fail - but they are not wrong"</li>
+            <li>Frustrating + difficult = inaccessible</li>
+            <li>Consistency is key</li>
+        </ul>
+
+        <h2>
+            Mobile Design
+        </h2>
+        <ul>
+            <li>Make your design scalable (zooming and different screen sizes)</li>
+            <li>
+                Design for one-handed use
+                <ul>
+                    <li>
+                        Keep important buttons in the bottom half of the screen
+                    </li>
+                    <li>
+                        Center your buttons horizontally - don't put them close to the edges
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <h2>
+            Interface Considerations
+        </h2>
+        <ul>
+            <li>Build for scanning, not reading</li>
+            <li>Take advantage of conventions</li>
+            <li>Create effective visual hierarchies</li>
+            <li>Break pages into clearly defined areas</li>
+            <li>Avoid "happy talk" instructions</li>
+        </ul>
+    </div>
+
+    <footer>
+        <hr />
+        <small>&copy; Justin Peeney 10/23/23</small>
+    </footer>
+
+</body>
+</html>
