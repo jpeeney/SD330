@@ -1,7 +1,7 @@
 {
   "course1": {
     "name": "System Design",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "330",
     "instructor": "Tokash",
     "credits": "4",
@@ -24,7 +24,7 @@
 
   "course2": {
     "name": "Computer Graphics",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "446",
     "instructor": "Joel",
     "credits": "4",
@@ -47,7 +47,7 @@
 
   "course3": {
     "name": "Database Management",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "308",
     "instructor": "Schwartz",
     "credits": "4",
@@ -70,7 +70,7 @@
 
   "course4": {
     "name": "Business of Games",
-    "discpline": "GAME",
+    "discipline": "GAME",
     "number": "301",
     "instructor": "Cox",
     "credits": "3",
@@ -93,7 +93,7 @@
 
   "course5": {
     "name": "Game Design & Programming",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "414",
     "instructor": "Johnson",
     "credits": "4",
@@ -116,7 +116,7 @@
 
   "course6": {
     "name": "3D Animation",
-    "discpline": "MDIA",
+    "discipline": "MDIA",
     "number": "432",
     "instructor": "Frieburghaus",
     "credits": "3",
@@ -139,7 +139,7 @@
 
   "course7": {
     "name": "Data Communications",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "306",
     "instructor": "Zhang",
     "credits": "4",
@@ -162,7 +162,7 @@
 
   "course8": {
     "name": "Software Systems & Analysis",
-    "discpline": "CMPT",
+    "discipline": "CMPT",
     "number": "230",
     "instructor": "Martensen",
     "credits": "4",
