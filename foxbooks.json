@@ -1,0 +1,185 @@
+{
+  "course1": {
+    "name": "System Design",
+    "discpline": "CMPT",
+    "number": "330",
+    "instructor": "Tokash",
+    "credits": "4",
+    "semester": "Fall",
+    "book1": {
+      "name": "Interaction Design",
+      "author": "Smith",
+      "publisher": "Cengage",
+      "version": "2",
+      "price": "100"
+    },
+    "book2": {
+      "name": "Intro to HTML",
+      "author": "Sebastian",
+      "publisher": "Wiley",
+      "version": "4",
+      "price": "110"
+    }
+  },
+
+  "course2": {
+    "name": "Computer Graphics",
+    "discpline": "CMPT",
+    "number": "446",
+    "instructor": "Joel",
+    "credits": "4",
+    "semester": "Spring",
+    "book1": {
+      "name": "Intro to OpenGL",
+      "author": "Murphy",
+      "publisher": "Cengage",
+      "version": "3",
+      "price": "120"
+    },
+    "book2": {
+      "name": "Fundamentals of Animation",
+      "author": "Murphy",
+      "publisher": "Cengage",
+      "version": "2",
+      "price": "130"
+    }
+  },
+
+  "course3": {
+    "name": "Database Management",
+    "discpline": "CMPT",
+    "number": "308",
+    "instructor": "Schwartz",
+    "credits": "4",
+    "semester": "Fall",
+    "book1": {
+      "name": "SQL for Beginners",
+      "author": "Cladwell",
+      "publisher": "Scholastic",
+      "version": "5",
+      "price": "100"
+    },
+    "book2": {
+      "name": "Database Architecture",
+      "author": "Faber",
+      "publisher": "Wiley",
+      "version": "3",
+      "price": "120"
+    }
+  },
+
+  "course4": {
+    "name": "Business of Games",
+    "discpline": "GAME",
+    "number": "301",
+    "instructor": "Cox",
+    "credits": "3",
+    "semester": "Spring",
+    "book1": {
+      "name": "Agile Methodologies",
+      "author": "Roth",
+      "publisher": "Pearson",
+      "version": "3",
+      "price": "130"
+    },
+    "book2": {
+      "name": "History of the Gaming Industry",
+      "author": "McDugall",
+      "publisher": "Cambridge",
+      "version": "2",
+      "price": "100"
+    }
+  },
+
+  "course5": {
+    "name": "Game Design & Programming",
+    "discpline": "CMPT",
+    "number": "414",
+    "instructor": "Johnson",
+    "credits": "4",
+    "semester": "Fall",
+    "book1": {
+      "name": "Designing for Games",
+      "author": "Brown",
+      "publisher": "Princeton",
+      "version": "2",
+      "price": "100"
+    },
+    "book2": {
+      "name": "C++ Programming",
+      "author": "Rober",
+      "publisher": "Wiley",
+      "version": "4",
+      "price": "130"
+    }
+  },
+
+  "course6": {
+    "name": "3D Animation",
+    "discpline": "MDIA",
+    "number": "432",
+    "instructor": "Frieburghaus",
+    "credits": "3",
+    "semester": "Spring",
+    "book1": {
+      "name": "A Guide to Autodesk Maya",
+      "author": "Yeller",
+      "publisher": "McGraw",
+      "version": "5",
+      "price": "140"
+    },
+    "book2": {
+      "name": "Fundamentals of 3D Animation",
+      "author": "Wexler",
+      "publisher": "Oxford",
+      "version": "3",
+      "price": "130"
+    }
+  },
+
+  "course7": {
+    "name": "Data Communications",
+    "discpline": "CMPT",
+    "number": "306",
+    "instructor": "Zhang",
+    "credits": "4",
+    "semester": "Fall",
+    "book1": {
+      "name": "WireShark for Beginners",
+      "author": "Goodman",
+      "publisher": "Princeton",
+      "version": "3",
+      "price": "120"
+    },
+    "book2": {
+      "name": "How the Internet Works",
+      "author": "Winger",
+      "publisher": "Pearson",
+      "version": "2",
+      "price": "100"
+    }
+  },
+
+  "course8": {
+    "name": "Software Systems & Analysis",
+    "discpline": "CMPT",
+    "number": "230",
+    "instructor": "Martensen",
+    "credits": "4",
+    "semester": "Spring",
+    "book1": {
+      "name": "Intro to Agile",
+      "author": "Roth",
+      "publisher": "Pearson",
+      "version": "2",
+      "price": "100"
+    },
+    "book2": {
+      "name": "Task Management",
+      "author": "Ti",
+      "publisher": "Scholastic",
+      "version": "3",
+      "price": "100"
+    }
+  }
+}
