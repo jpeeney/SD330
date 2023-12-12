@@ -1,0 +1,22 @@
+﻿body {
+    font-family: 'Myriad Pro';
+    background-color: indianred;
+    color: white;
+}
+.imgbox {
+    clear: left;
+    display: grid;
+    height: 100%;
+    padding: 20px;
+}
+
+.centerFit {
+    max-width: 60%;
+    max-height: 60vh;
+    margin: auto;
+}
+
+.floatLeft {
+    float: left;
+    width: 50%;
+}

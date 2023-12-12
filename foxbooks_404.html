@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Foxbooks - Error</title>
+    <link rel="stylesheet" href="fox_style.css">
+    <script>
+        function sendReport() {
+            var report = document.getElementById("report").value;
+            if (report == "") {
+                alert("Please type your issue before sending.")
+            }
+            else {
+                alert("Thank you for sending your error report.");
+            }
+        }
+    </script>
+
+</head>
+<body>
+    <script src="fox_menu.js"></script>
+    <a href="foxbooks.html">Home</a> > <a href="foxbooks_404.html">Error Page</a>
+
+    <h1>Page not found</h1>
+    <h2>404 Error</h2>
+
+    <div class="floatLeft">
+        We're sorry, but we couldn't find the page you're looking for. <br />
+        It may have been deleted or moved.
+    </div>
+
+    <div class="floatLeft">
+        Check if your link was incorrect, or send a report. <br />
+        Tell us what happened: <input type="text" id="report" />
+        <button onclick="sendReport()">Send Report</button>
+    </div>
+
+    <br />
+
+    <div class="imgbox">
+        <img class="centerFit" src="https://img.freepik.com/free-vector/student-stress-concept-illustration_114360-8908.jpg?w=2000">
+    </div>
+
+    <hr />
+    <footer>
+        <small>&copy; Justin Peeney 12/11/23</small>
+    </footer>
+</body>
+</html>

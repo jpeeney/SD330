@@ -1,0 +1,1 @@
+﻿document.write('<p id="menu"><a href="foxbooks.html">Home</a> <a href = "foxbooks_404.html">Log In</a> <a href = "foxbooks_404.html">About</a> <a href="foxbooks_courses.html">Courses</a> <a href="foxbooks_books.html">Textbooks</a></p>');

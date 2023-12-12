@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Foxbooks - Textbooks</title>
+    <link rel="stylesheet" href="fox_style.css">
+</head>
+<body>
+    <script src="fox_menu.js"></script>
+    <a href="foxbooks.html">Home</a> > <a href="foxbooks_books.html">Textbooks</a>
+    <h1>Textbooks</h1>
+
+    <p id="info">
+        <script type="module">
+            const response = await fetch("https://jpeeney.github.io/SD330/foxbooks.json");
+            const data = await response.json();
+
+            for (let i = 1; i < 9; i++) {
+                let htmlString = "<b>";
+                let courseNum = "course" + i;
+                htmlString += data[courseNum].book1.name + "</b><br />"
+                    + "Author: " + data[courseNum].book1.author + "<br />"
+                    + "Publisher: " + data[courseNum].book1.publisher + "<br />"
+                    + "Version: " + data[courseNum].book1.version + "<br />"
+                    + "Price: $" + data[courseNum].book1.price + "<br />"
+                    + "<u>Required for: " + data[courseNum].name + "</u><p><b>"
+
+                    + data[courseNum].book1.name + "</b><br />"
+                    + "Author: " + data[courseNum].book2.author + "<br />"
+                    + "Publisher: " + data[courseNum].book2.publisher + "<br />"
+                    + "Version: " + data[courseNum].book2.version + "<br />"
+                    + "Price: $" + data[courseNum].book2.price + "<br />"
+                    + "<u>Required for: " + data[courseNum].name + "</u><p><b>";
+
+                document.getElementById(courseNum).innerHTML += htmlString;
+            }
+
+        </script>
+    </p>
+
+    <div id="course1"></div>
+    <div id="course2"></div>
+    <div id="course3"></div>
+    <div id="course4"></div>
+    <div id="course5"></div>
+    <div id="course6"></div>
+    <div id="course7"></div>
+    <div id="course8"></div>
+
+    <hr />
+    <footer>
+        <small>&copy; Justin Peeney 12/11/23</small>
+    </footer>
+</body>
+</html>
